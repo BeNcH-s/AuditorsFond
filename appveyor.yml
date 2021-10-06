@@ -1,16 +1,7 @@
-version: '1.0.{build}'
-#assembly_info:
-#  patch: true
-#  file: '**\*.csproj'
-dotnet_csproj:
-  patch: true
-  file: 'AuditorsFond.csproj'
-  version: 5.0.3
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
-build:
-  project: AuditorsFond.sln
+version: 1.0.{build}
+
 before_build:
   - nuget restore
+
+build:
+  verbosity: minimal
